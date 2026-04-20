@@ -124,3 +124,6 @@ textarea:focus {
   text-align: center;
   padding: 15px;
 }
+button {
+  margin: 5px;
+}

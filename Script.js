@@ -38,3 +38,30 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     this.reset();
   }
 });
+
+function readSelectedText() {
+  const selectedText = window.getSelection().toString();
+
+  if (!selectedText) {
+    alert("Моля, маркирайте текст с мишката.");
+    return;
+  }
+
+  speechSynthesis.cancel();
+
+  const speech = new SpeechSynthesisUtterance(selectedText);
+
+  speech.lang = "bg-BG";
+  speech.volume = 1;
+  speech.rate = 1;
+  speech.pitch = 1;
+
+  speech.onstart = () => console.log("Чете избран текст");
+  speech.onerror = (e) => console.log("Грешка:", e);
+
+  speechSynthesis.speak(speech);
+}
+
+function stopReading() {
+  speechSynthesis.cancel();
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Достъпен уеб сайт</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Пропусни към основното съдържание</a>
+
+  <header class="site-header">
+    <h1>Достъпен уеб сайт</h1>
+
+    <nav aria-label="Основна навигация">
+      <ul class="nav-list">
+        <li><a href="#about">За нас</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#contact">Контакти</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" class="container">
+    <section id="about">
+      <h2>За нас</h2>
+      <p>
+        Това е примерен уеб сайт, разработен с фокус върху достъпността,
+        добрия UI/UX дизайн и лесната навигация за всички потребители.
+      </p>
+      <img
+        src="images.jfif"
+        alt="Примерно изображение на екип, работещ в офис среда"
+      />
+    </section>
+
+    <section id="services">
+      <h2>Нашите услуги</h2>
+
+      <div class="card">
+        <h3>Уеб разработка</h3>
+        <p>Създаване на модерни, responsive и достъпни уеб сайтове.</p>
+      </div>
+
+      <div class="card">
+        <h3>UI/UX дизайн</h3>
+        <p>Изграждане на удобни и разбираеми интерфейси за потребителите.</p>
+      </div>
+
+      <div class="card">
+        <h3>Accessibility одит</h3>
+        <p>Проверка на сайт по основни принципи на WCAG 2.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Форма за контакт</h2>
+
+      <form id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name">Име</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            aria-describedby="name-error"
+            required
+          />
+          <span id="name-error" class="error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Имейл</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            aria-describedby="email-error"
+            required
+          />
+          <span id="email-error" class="error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Съобщение</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            aria-describedby="message-error"
+            required
+          ></textarea>
+          <span id="message-error" class="error" aria-live="polite"></span>
+        </div>
+
+        <button type="submit">Изпрати</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Достъпен уеб сайт. Всички права запазени.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
